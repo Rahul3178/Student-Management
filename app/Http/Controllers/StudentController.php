@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Student;
 
 class StudentController extends Controller
 {
@@ -21,9 +22,16 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $req)
     {
-        //
+        $Student=new Student;
+        $Student->registration=$req->reg;
+        $Student->name=$req->name;
+        $Student->class=$req->class;
+        $Student->roll=$req->roll;
+        $Student->save();
+        return redirect('home');
+
     }
 
     /**
@@ -43,9 +51,15 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $data=Student::all();
+        return view('home',['Students'=>$data]);// table name
+    }
+    public function list()
+    {
+        $data=Student::all();
+        return view('list',['Students'=>$data]);// table name
     }
 
     /**

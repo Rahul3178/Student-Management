@@ -5,15 +5,15 @@
          <div class="col-6">
              
              <form class="f1  d-flex justify-content-center mt-sm-5" 
-             
-             action="#" method="">
+             action="create" method="post">
+                @csrf
                  <img src="{{asset('images/pokemon.png')}}" width="70" height="70" alt="">
                  <br><br>
                  <label>Admission Form</label><br>
-                 <input class="in" type="text "placeholder="Registration number"></input><br>
-                 <input class="in" type="text "placeholder="Name"><br>
-                 <input class="in" type="text" placeholder="class"><br>
-                 <input class="in" type="text "placeholder="Roll"><br>
+                 <input class="in" type="text"name="reg" placeholder="Registration number"></input><br>
+                 <input class="in" type="text" name="name"placeholder="Name"><br>
+                 <input class="in" type="text" name="class" placeholder="class"><br>
+                 <input class="in" type="text" name="roll"placeholder="Roll"><br>
                  <button class=" btn btn-success"type="submit">Submit</button>
 
              </form>
@@ -21,12 +21,27 @@
          <div class="col-6">
              <table  class="table table-bordered table-striped mt-sm-5 table-hover">
                  <tr class="table-success">
+                     <th >Id</th>
                      <th >Registration Nu.</th>
                      <th>Name</th>
                      <th>Roll</th>
                      <th>Class</th>
                      <th>Operation</th>
-                 </tr>
+                     </tr>
+                     @foreach($Students as $Student)
+                    <tr>
+                        <td>{{$Student['id']}}</td>
+                        <td>{{$Student['registration']}}</td>
+                        <td>{{$Student['name']}}</td>
+                        <td>{{$Student['class']}}</td>
+                        <td>{{$Student['roll']}}</td>
+                        <td>
+                            <button class="btn btn-info" type="button">Edit</button>
+                            <button class="btn btn-Danger" type="button">Delete</button>
+                        </td>
+                    </tr>
+                    @endforeach
+                 
              </table>
          </div>
      </div>
