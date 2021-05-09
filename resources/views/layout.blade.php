@@ -5,7 +5,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
-
+<!--- google fonts file--->
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
     @section('header')
@@ -22,8 +24,15 @@
 
                     <ul class="navbar-nav"> 
                         
-                        <li class="nav-item "><a class="nav-link" href="home">Create</a></li>
-                        <li class="nav-items"><a class="nav-link" href="list">List</a></li>
+                        <li class="nav-item "><a class="nav-link" href="home">
+                        <span class="material-icons">
+                            home
+                            </span></a></li>
+                        <li class="nav-items"><a class="nav-link" href="list"> 
+                       <span class="material-icons">
+                            search
+                            </span>
+                       </a></li>
                         
                     </ul>
                 </div>

@@ -14,14 +14,14 @@
                  <input class="in" type="text "placeholder="Name"><br>
                  <input class="in" type="text" placeholder="class"><br>
                  <input class="in" type="text "placeholder="Roll"><br>
-                 <button class="b"type="submit">Submit</button>
+                 <button class=" btn btn-success"type="submit">Submit</button>
 
              </form>
          </div>
          <div class="col-6">
-             <table  class="table table-bordered table-striped mt-sm-5">
-                 <tr>
-                     <th>Registration Nu.</th>
+             <table  class="table table-bordered table-striped mt-sm-5 table-hover">
+                 <tr class="table-success">
+                     <th >Registration Nu.</th>
                      <th>Name</th>
                      <th>Roll</th>
                      <th>Class</th>
