@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::view('lay','layout');
 Route::view('home','home');
 Route::view('list','list');
+Route::view('update','update');
 Route::post('create',[StudentController::class,'create']);
 Route::get('home',[StudentController::class,'show']);
 Route::get('list',[StudentController::class,'list']);

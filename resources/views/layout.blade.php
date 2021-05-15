@@ -30,7 +30,7 @@
                             </span></a></li>
                         <li class="nav-items"><a class="nav-link" href="list"> 
                        <span class="material-icons">
-                            search
+                           list
                             </span>
                        </a></li>
                         
