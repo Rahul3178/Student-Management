@@ -20,11 +20,11 @@
                         <td>{{$Student['class']}}</td>
                         <td>{{$Student['roll']}}</td>
                         <td>
-                            <button class="btn btn-info" type="button">Edit</button>
-                            <button class="btn btn-Danger" type="button">Delete</button>
-                            <button class="btn btn-warning" type="button">Print</button>
+                            <button class="btn " type="button"><span class="material-icons">person_add</span></button>
+                            <button class="btn " type="button"><span class="material-icons">delete</span></button>
+                            <button class="btn " type="button"><span class="material-icons">print</span></button>
                         </td>
-                    </tr>
+                        </tr>
                     @endforeach
                 </table>
             </div>
